@@ -17,7 +17,7 @@ function loadPreferences(): Preferences {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
     return {
       players: safePlayers(saved.players),
-      page: pages.includes(linkedPage) ? linkedPage as Page : pages.includes(saved.page) ? saved.page : 'hands',
+      page: pages.includes(linkedPage) ? linkedPage as Page : 'hands',
       hand: HANDS.includes(saved.hand) ? saved.hand : 'AA',
     };
   } catch { return { players: 6, page: pages.includes(linkedPage) ? linkedPage as Page : 'hands', hand: 'AA' }; }
@@ -224,7 +224,7 @@ export default function App() {
   const heading = { hands: ['起手牌', 'Starting Hands'], rankings: ['牌型排名', 'Hand Rankings'], positions: ['牌桌位置', 'Positions'], draws: ['听牌', 'Draws'] }[page];
   const setPlayers = (value: number) => setPreferences(current => ({ ...current, players: safePlayers(value) }));
   const setHand = (value: string) => setPreferences(current => ({ ...current, hand: value }));
-  useEffect(() => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...preferences, page })); } catch { /* Browsing also works when storage is disabled. */ } }, [preferences, page]);
+  useEffect(() => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ players, hand })); } catch { /* Browsing also works when storage is disabled. */ } }, [players, hand]);
   useEffect(() => {
     const previousRestoration = history.scrollRestoration;
     history.scrollRestoration = 'manual';
