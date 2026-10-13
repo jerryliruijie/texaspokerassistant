@@ -439,3 +439,62 @@ html { scroll-padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
   .wide-sheet .equity-number strong { font-size: 28px; }
   .wide-sheet .matrix-legend { min-height: 44px; }
 }
+
+/* Drawing odds */
+.draw-stage { margin: 2px 0 20px; padding: 4px; gap: 3px; }
+.draw-stage button { min-height: 52px; gap: 5px; padding-inline: 2px; }
+.draw-stage button > span { font-size: 12px; }
+.draw-stage button > small { font-size: 10px; letter-spacing: 0; text-transform: none; }
+.draw-columns, .draw-toggle { display: grid; grid-template-columns: minmax(0, 1fr) 35px 92px 13px; align-items: center; column-gap: 8px; }
+.draw-columns { padding: 0 14px 11px; color: #a2ab97; font-size: 11px; }
+.draw-columns > span > small { display: block; color: #788570; font-size: 9px; margin-top: 4px; }
+.draw-columns > span:nth-child(2) { text-align: center; }
+.draw-columns > span:nth-child(3) { text-align: right; }
+.draw-list { display: flex; flex-direction: column; gap: 10px; }
+.draw-item { overflow: hidden; border: 1px solid #343c2c; border-radius: 12px; background: linear-gradient(115deg, #20251c, #191f18); }
+.draw-item:first-child { border-color: #675c40; background: radial-gradient(ellipse at top left, #b69a6014, transparent 75%), #22261d; }
+.draw-item.open { border-color: #8e7850; }
+.draw-toggle { width: 100%; min-height: 89px; padding: 16px 13px; text-align: left; }
+.draw-name { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.draw-name > strong { font-size: 14px; font-weight: 550; line-height: 1.35; }
+.draw-name > small { font-size: 10px; color: #9ca98d; line-height: 1.45; }
+.draw-outs-count { text-align: center; color: #a5b295; font-size: 16px; font-variant-numeric: tabular-nums; }
+.draw-probability { font: 30px Georgia, serif; color: #e2c794; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; letter-spacing: -.8px; }
+.draw-probability > small { font: 12px 'DM Sans Variable', sans-serif; margin-left: 2px; letter-spacing: 0; color: #b8a47b; }
+.draw-chevron { color: #80916e; justify-self: end; transition: transform 150ms; }
+.draw-item.open .draw-chevron { transform: rotate(90deg); color: var(--gold); }
+.draw-detail { margin: 0 13px; padding: 15px 0 17px; border-top: 1px solid #424a34; animation: page-in 160ms ease-out; }
+.draw-example { display: flex; gap: 18px; align-items: flex-start; }
+.draw-example h3 { margin: 0 0 10px; font-size: 11px; color: #c2cbb5; font-weight: 400; }
+.draw-example h3 span { color: #849777; font-size: 10px; margin-left: 4px; }
+.draw-example-hand, .draw-example-board { display: flex; align-items: center; gap: 4px; }
+.draw-example-hand .playing-card { width: 35px; height: 51px; border-radius: 4px; }
+.draw-example-hand .card-corner b { font-size: 11px; }
+.draw-example-hand .card-pip { font-size: 20px; }
+.draw-example-hand .card-corner.bottom { display: none; }
+.draw-example-board .playing-card { width: 28px; height: 42px; border-radius: 3px; }
+.draw-example-board .card-corner { top: 3px; left: 3px; }
+.draw-example-board .card-corner b { font-size: 10px; }
+.draw-example-board .card-corner > span { font-size: 8px; }
+.draw-example-board .card-corner.bottom { display: none; }
+.draw-example-board .card-pip { font-size: 16px; padding-top: 5px; }
+.draw-card-back { width: 28px; height: 42px; flex-shrink: 0; border: 1px dashed #6a765342; border-radius: 3px; background: repeating-linear-gradient(45deg, transparent, transparent 3px, #a1a67c08 3px, #a1a67c08 4px), #171f14; }
+.draw-completion { color: #b8c4a9; font-size: 12px; line-height: 1.8; margin: 13px 0 11px; }
+.draw-out-cards { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; border-radius: 7px; background: #10170f; }
+.draw-out-cards > span { display: inline-flex; }
+.draw-out-cards .playing-card.small { width: 26px; height: 39px; box-shadow: none; }
+.draw-out-cards > .overlap { outline: 2px solid #d6b676; outline-offset: 2px; border-radius: 3px; }
+.draw-overlap { display: grid; grid-template-columns: 1fr auto; column-gap: 10px; align-items: center; margin-top: 14px; }
+.draw-overlap > span { font-size: 11px; color: #b9c3a8; }
+.draw-overlap > strong { font-size: 19px; font-weight: 500; color: var(--gold); }
+.draw-overlap > strong > small { font-size: 10px; color: #9aa88b; font-weight: 400; }
+.draw-overlap > p { grid-column: 1 / -1; font-size: 11px; color: #91a17f; margin: 8px 0 0; line-height: 1.6; }
+@media (max-width: 374px) {
+  .draw-columns, .draw-toggle { grid-template-columns: minmax(0, 1fr) 30px 79px 12px; column-gap: 6px; }
+  .draw-toggle { padding-inline: 11px; }
+  .draw-columns { padding-inline: 12px; }
+  .draw-name > strong { font-size: 13px; }
+  .draw-probability { font-size: 27px; }
+  .draw-example { gap: 12px; }
+  .draw-example-board { gap: 3px; }
+}

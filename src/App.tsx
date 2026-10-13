@@ -2,30 +2,33 @@ import { useEffect, useLayoutEffect, useId, useRef, useState, type CSSProperties
 import equityData from './data/equity.json';
 import { RANKINGS } from './data/rankings';
 import { actionOrder, POSITION_TERMS, relativePosition, SEATS, type PositionId, type Seat, type Street } from './data/positions';
-import { cellColors, EQUITY_BANDS, equityBand, exampleCards, HANDS, handStats, matrixHand, RANKS, safePlayers, TERMS, type CardValue, type Page } from './lib/poker';
+import { cellColors, EQUITY_BANDS, equityBand, exampleCards, HANDS, handStats, matrixHand, RANKS, safePlayers, TERMS, type Page } from './lib/poker';
+import { PlayingCard } from './components/PlayingCard';
+import { Draws } from './components/Draws';
 
 const EQUITIES: Record<string, number[]> = equityData.hands;
-const SUITS = { s: '♠', h: '♥', d: '♦', c: '♣' };
-const SUIT_NAMES = { s: '黑桃', h: '红桃', d: '方块', c: '梅花' };
 const STORAGE_KEY = 'pocket.preferences.v1';
 type Preferences = { players: number; page: Page; hand: string };
 
 function loadPreferences(): Preferences {
+  const pages = ['hands', 'rankings', 'positions', 'draws'];
+  const linkedPage = window.location.hash.slice(1).split('/')[0];
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
     return {
       players: safePlayers(saved.players),
-      page: ['hands', 'rankings', 'positions'].includes(saved.page) ? saved.page : 'hands',
+      page: pages.includes(linkedPage) ? linkedPage as Page : pages.includes(saved.page) ? saved.page : 'hands',
       hand: HANDS.includes(saved.hand) ? saved.hand : 'AA',
     };
-  } catch { return { players: 6, page: 'hands', hand: 'AA' }; }
+  } catch { return { players: 6, page: pages.includes(linkedPage) ? linkedPage as Page : 'hands', hand: 'AA' }; }
 }
 
-type IconName = 'grid' | 'cards' | 'table' | 'info' | 'expand' | 'close' | 'chevron' | 'users' | 'arrow' | 'spade';
+type IconName = 'grid' | 'cards' | 'table' | 'draw' | 'info' | 'expand' | 'close' | 'chevron' | 'users' | 'arrow' | 'spade';
 function Icon({ name, size = 20, className = '' }: { name: IconName; size?: number; className?: string }) {
   const paths: Record<IconName, ReactNode> = {
     grid: <><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M4 10h16M4 15h16M10 4v16M15 4v16" /></>,
     cards: <><rect x="8" y="4" width="12" height="16" rx="2" /><path d="m5 6-2 1 3 14a2 2 0 0 0 2 1l4-1M14 9l-2 3 2 3 2-3Z" /></>,
+    draw: <><rect x="3" y="5" width="10" height="15" rx="2" /><path d="M7 9h2M7 12h2M17 4v8m-3-3 3 3 3-3M16 17h5" /></>,
     table: <><rect x="6" y="3" width="12" height="18" rx="6" /><path d="M2 8h1M2 16h1M21 8h1M21 16h1M11 10h2v4h-2Z" /></>,
     info: <><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7v.3" /></>,
     expand: <><path d="M9 4H4v5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></>,
@@ -36,15 +39,6 @@ function Icon({ name, size = 20, className = '' }: { name: IconName; size?: numb
     spade: <path d="M12 3c-2 4-8 7-8 11a4 4 0 0 0 8 0 4 4 0 0 0 8 0c0-4-6-7-8-11Zm0 11-3 7h6Z" />,
   };
   return <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
-}
-
-function PlayingCard({ card, small = false, kicker = false }: { card: CardValue; small?: boolean; kicker?: boolean }) {
-  const rank = card.rank === 'T' ? '10' : card.rank;
-  return <span className={`playing-card ${card.suit === 'h' || card.suit === 'd' ? 'red' : ''} ${small ? 'small' : ''} ${kicker ? 'kicker' : ''}`} role="img" aria-label={`${SUIT_NAMES[card.suit]}${rank}${kicker ? '，踢脚牌 Kicker' : ''}`}>
-    <span className="card-corner"><b>{rank}</b><span>{SUITS[card.suit]}</span></span>
-    <span className="card-pip">{SUITS[card.suit]}</span>
-    <span className="card-corner bottom"><b>{rank}</b><span>{SUITS[card.suit]}</span></span>
-  </span>;
 }
 
 function SectionHeading({ zh, en, children }: { zh: string; en: string; children?: ReactNode }) {
@@ -206,6 +200,7 @@ function Positions({ players, setPlayers }: { players: number; setPlayers: (play
 }
 
 function InfoContent({ page }: { page: Page }) {
+  if (page === 'draws') return <div className="info-content"><section><h3>补牌 <span>Outs</span></h3><p>表中命中率指所选阶段至少出现一张列出的补牌。翻牌后有 47 张未知牌，转牌后有 46 张；重叠补牌只计一次。</p><a href="https://www.pokerstars.com/poker/learn/lesson/calculating-outs/" target="_blank" rel="noreferrer">听牌与补牌 · PokerStars ↗</a></section></div>;
   return <div className="info-content">
     {page === 'hands' ? <>
       <section><h3>胜率口径 <span>Equity model</span></h3><p>对手随机持牌，所有人看到河牌。数值为赢得底池的平均份额：独赢记 1，平局按平分人数计入。</p><p>平均胜率为 1 ÷ 总人数。颜色按与平均值的比例分档：远高 ≥ 1.5 倍，略高 1.1–1.5 倍，接近 0.9–1.1 倍，低于 &lt; 0.9 倍。</p></section>
@@ -216,17 +211,17 @@ function InfoContent({ page }: { page: Page }) {
   </div>;
 }
 
-const NAV: { id: Page; title: string; en: string; icon: IconName }[] = [{ id: 'hands', title: '起手牌', en: 'HANDS', icon: 'grid' }, { id: 'rankings', title: '牌型', en: 'RANKINGS', icon: 'cards' }, { id: 'positions', title: '位置', en: 'POSITIONS', icon: 'table' }];
+const NAV: { id: Page; title: string; en: string; icon: IconName }[] = [{ id: 'hands', title: '起手牌', en: 'HANDS', icon: 'grid' }, { id: 'rankings', title: '牌型', en: 'RANKINGS', icon: 'cards' }, { id: 'positions', title: '位置', en: 'POSITIONS', icon: 'table' }, { id: 'draws', title: '听牌', en: 'DRAWS', icon: 'draw' }];
 
 export default function App() {
   const [preferences, setPreferences] = useState(loadPreferences);
   type Route = { page: Page; overlay: 'info' | 'matrix' | null };
   const [route, setRoute] = useState<Route>(() => ({ page: preferences.page, overlay: null }));
   const routeRef = useRef(route);
-  const scrollPositions = useRef<Record<Page, number>>({ hands: 0, rankings: 0, positions: 0 });
+  const scrollPositions = useRef<Record<Page, number>>({ hands: 0, rankings: 0, positions: 0, draws: 0 });
   const { players, hand } = preferences;
   const { page, overlay } = route;
-  const heading = { hands: ['起手牌', 'Starting Hands'], rankings: ['牌型排名', 'Hand Rankings'], positions: ['牌桌位置', 'Positions'] }[page];
+  const heading = { hands: ['起手牌', 'Starting Hands'], rankings: ['牌型排名', 'Hand Rankings'], positions: ['牌桌位置', 'Positions'], draws: ['听牌', 'Draws'] }[page];
   const setPlayers = (value: number) => setPreferences(current => ({ ...current, players: safePlayers(value) }));
   const setHand = (value: string) => setPreferences(current => ({ ...current, hand: value }));
   useEffect(() => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...preferences, page })); } catch { /* Browsing also works when storage is disabled. */ } }, [preferences, page]);
@@ -261,6 +256,7 @@ export default function App() {
       <div className="page page-hands" hidden={page !== 'hands'}><StartingHands players={players} hand={hand} setPlayers={setPlayers} setHand={setHand} onExpand={() => navigate({ page, overlay: 'matrix' })} /></div>
       <div className="page page-rankings" hidden={page !== 'rankings'}><Rankings /></div>
       <div className="page page-positions" hidden={page !== 'positions'}><Positions players={players} setPlayers={setPlayers} /></div>
+      <div className="page page-draws" hidden={page !== 'draws'}><Draws /></div>
     </main>
     <nav className="bottom-nav" aria-label="主导航 / Main navigation">{NAV.map(item => <button key={item.id} onClick={() => changePage(item.id)} className={page === item.id ? 'active' : ''} aria-current={page === item.id ? 'page' : undefined}><span className="nav-icon"><Icon name={item.icon} size={21} /></span><span>{item.title}</span><small>{item.en}</small></button>)}</nav>
     {overlay === 'info' && <Dialog title="规则与数据" english="Notes & Methodology" onClose={() => history.back()}><InfoContent page={page} /></Dialog>}

@@ -1,5 +1,5 @@
 export const RANKS = ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2'] as const;
-export type Page = 'hands' | 'rankings' | 'positions';
+export type Page = 'hands' | 'rankings' | 'positions' | 'draws';
 export type HandKind = 'pair' | 'suited' | 'offsuit';
 export type Term = { zh: string; en: string; abbr?: string };
 export type CardValue = { rank: string; suit: 's' | 'h' | 'd' | 'c' };

@@ -6,6 +6,7 @@ async (page) => {
   const tab = async i => page.locator('.bottom-nav button').nth(i).click();
   const closed = async () => page.getByRole('dialog').waitFor({ state: 'detached' });
   await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(new URL('#hands', page.url()).href);
   await page.evaluate(() => localStorage.clear()); await page.reload();
   for (const width of [360, 390, 430]) {
     await page.setViewportSize({ width, height: 844 }); await tab(0); await tab(0);
