@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "tsx --test tests/*.test.ts",
-    "data:generate": "node scripts/generate-equity.mjs"
+    "data:generate": "node scripts/generate-equity.mjs",
+    "draws:generate": "tsx scripts/generate-draws.ts",
+    "draws:check": "tsx scripts/generate-draws.ts --check"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.3.0",

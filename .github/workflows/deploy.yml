@@ -32,6 +32,8 @@ jobs:
         run: npm ci
       - name: Test poker rules and data
         run: npm test
+      - name: Verify generated drawing probabilities
+        run: npm run draws:check
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0

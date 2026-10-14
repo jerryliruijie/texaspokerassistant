@@ -1,0 +1,2083 @@
+{
+  "version": 2,
+  "method": "exact-card-enumeration",
+  "scenarios": {
+    "flush-1-nut-flop-2:flop-turn": {
+      "made": false,
+      "probability": 0,
+      "hits": 0,
+      "total": 47,
+      "outs": [],
+      "candidates": [
+        "Qh",
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": true,
+      "setupProbability": 0.2127659574468085,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 415,
+          "total": 1081,
+          "probability": 0.38390379278445885
+        }
+      ]
+    },
+    "flush-1-nut-flop-2:flop-river": {
+      "made": false,
+      "probability": 0.041628122109158186,
+      "hits": 45,
+      "total": 1081,
+      "outs": [],
+      "candidates": [
+        "Qh",
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": true,
+      "setupProbability": 0.2127659574468085,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 415,
+          "total": 1081,
+          "probability": 0.38390379278445885
+        }
+      ]
+    },
+    "flush-1-nut-flop-3:flop-turn": {
+      "made": false,
+      "probability": 0.19148936170212766,
+      "hits": 9,
+      "total": 47,
+      "outs": [
+        "Qh",
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Th": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 已成同花",
+          "hits": 36,
+          "total": 1081,
+          "probability": 0.03330249768732655
+        }
+      ]
+    },
+    "flush-1-nut-flop-3:flop-river": {
+      "made": false,
+      "probability": 0.34967622571692875,
+      "hits": 378,
+      "total": 1081,
+      "outs": [
+        "Qh",
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Th": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 已成同花",
+          "hits": 36,
+          "total": 1081,
+          "probability": 0.03330249768732655
+        }
+      ]
+    },
+    "flush-1-nut-turn-2:turn-river": {
+      "made": false,
+      "probability": 0,
+      "hits": 0,
+      "total": 46,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 405,
+          "total": 1035,
+          "probability": 0.391304347826087
+        }
+      ]
+    },
+    "flush-1-nut-turn-3:turn-river": {
+      "made": false,
+      "probability": 0.1956521739130435,
+      "hits": 9,
+      "total": 46,
+      "outs": [
+        "Qh",
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Th": [
+          "flush-board"
+        ],
+        "5h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 已成同花",
+          "hits": 36,
+          "total": 1035,
+          "probability": 0.034782608695652174
+        }
+      ]
+    },
+    "flush-1-nut-turn-4:turn-river": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Ah",
+        "Kh",
+        "Jh",
+        "6h",
+        "3h"
+      ],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 0,
+          "total": 1035,
+          "probability": 0
+        }
+      ]
+    },
+    "flush-1-low-flop-2:flop-turn": {
+      "made": false,
+      "probability": 0,
+      "hits": 0,
+      "total": 47,
+      "outs": [],
+      "candidates": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": true,
+      "setupProbability": 0.2127659574468085,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 415,
+          "total": 1081,
+          "probability": 0.38390379278445885
+        }
+      ]
+    },
+    "flush-1-low-flop-2:flop-river": {
+      "made": false,
+      "probability": 0.041628122109158186,
+      "hits": 45,
+      "total": 1081,
+      "outs": [],
+      "candidates": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": true,
+      "setupProbability": 0.2127659574468085,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 415,
+          "total": 1081,
+          "probability": 0.38390379278445885
+        }
+      ]
+    },
+    "flush-1-low-flop-3:flop-turn": {
+      "made": false,
+      "probability": 0.19148936170212766,
+      "hits": 9,
+      "total": 47,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h",
+        "7h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 已成同花",
+          "hits": 36,
+          "total": 1081,
+          "probability": 0.03330249768732655
+        }
+      ]
+    },
+    "flush-1-low-flop-3:flop-river": {
+      "made": false,
+      "probability": 0.34967622571692875,
+      "hits": 378,
+      "total": 1081,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h",
+        "7h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 已成同花",
+          "hits": 36,
+          "total": 1081,
+          "probability": 0.03330249768732655
+        }
+      ]
+    },
+    "flush-1-low-turn-2:turn-river": {
+      "made": false,
+      "probability": 0,
+      "hits": 0,
+      "total": 46,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 405,
+          "total": 1035,
+          "probability": 0.391304347826087
+        }
+      ]
+    },
+    "flush-1-low-turn-3:turn-river": {
+      "made": false,
+      "probability": 0.1956521739130435,
+      "hits": 9,
+      "total": 46,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h",
+        "7h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "5h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 已成同花",
+          "hits": 36,
+          "total": 1035,
+          "probability": 0.034782608695652174
+        }
+      ]
+    },
+    "flush-1-low-turn-4:turn-river": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Kh",
+        "Jh",
+        "8h",
+        "6h",
+        "3h"
+      ],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 66,
+          "total": 1225,
+          "probability": 0.053877551020408164
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 174,
+          "total": 1035,
+          "probability": 0.1681159420289855
+        }
+      ]
+    },
+    "flush-2-nut-flop-1:flop-turn": {
+      "made": false,
+      "probability": 0,
+      "hits": 0,
+      "total": 47,
+      "outs": [],
+      "candidates": [
+        "Jh",
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": true,
+      "setupProbability": 0.2127659574468085,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 415,
+          "total": 1081,
+          "probability": 0.38390379278445885
+        }
+      ]
+    },
+    "flush-2-nut-flop-1:flop-river": {
+      "made": false,
+      "probability": 0.041628122109158186,
+      "hits": 45,
+      "total": 1081,
+      "outs": [],
+      "candidates": [
+        "Jh",
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": true,
+      "setupProbability": 0.2127659574468085,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 415,
+          "total": 1081,
+          "probability": 0.38390379278445885
+        }
+      ]
+    },
+    "flush-2-nut-flop-2:flop-turn": {
+      "made": false,
+      "probability": 0.19148936170212766,
+      "hits": 9,
+      "total": 47,
+      "outs": [
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Th": [
+          "flush-board"
+        ],
+        "5h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 378,
+          "total": 1081,
+          "probability": 0.34967622571692875
+        }
+      ]
+    },
+    "flush-2-nut-flop-2:flop-river": {
+      "made": false,
+      "probability": 0.34967622571692875,
+      "hits": 378,
+      "total": 1081,
+      "outs": [
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Th": [
+          "flush-board"
+        ],
+        "5h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 378,
+          "total": 1081,
+          "probability": 0.34967622571692875
+        }
+      ]
+    },
+    "flush-2-nut-flop-3:flop-turn": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "Jh",
+        "6h"
+      ],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 0,
+          "total": 1081,
+          "probability": 0
+        }
+      ]
+    },
+    "flush-2-nut-flop-3:flop-river": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "Jh",
+        "6h"
+      ],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 0,
+          "total": 1081,
+          "probability": 0
+        }
+      ]
+    },
+    "flush-2-nut-turn-1:turn-river": {
+      "made": false,
+      "probability": 0,
+      "hits": 0,
+      "total": 46,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 405,
+          "total": 1035,
+          "probability": 0.391304347826087
+        }
+      ]
+    },
+    "flush-2-nut-turn-2:turn-river": {
+      "made": false,
+      "probability": 0.1956521739130435,
+      "hits": 9,
+      "total": 46,
+      "outs": [
+        "Th",
+        "9h",
+        "8h",
+        "7h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Th": [
+          "flush-board"
+        ],
+        "5h": [
+          "board-pair"
+        ],
+        "2h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 369,
+          "total": 1035,
+          "probability": 0.3565217391304348
+        }
+      ]
+    },
+    "flush-2-nut-turn-3:turn-river": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "Jh",
+        "6h"
+      ],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 0,
+          "total": 1035,
+          "probability": 0
+        }
+      ]
+    },
+    "flush-2-nut-turn-4:turn-river": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Ah",
+        "Kh",
+        "Qh",
+        "Jh",
+        "6h"
+      ],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 0,
+          "total": 1035,
+          "probability": 0
+        }
+      ]
+    },
+    "flush-2-low-flop-1:flop-turn": {
+      "made": false,
+      "probability": 0,
+      "hits": 0,
+      "total": 47,
+      "outs": [],
+      "candidates": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": true,
+      "setupProbability": 0.2127659574468085,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 415,
+          "total": 1081,
+          "probability": 0.38390379278445885
+        }
+      ]
+    },
+    "flush-2-low-flop-1:flop-river": {
+      "made": false,
+      "probability": 0.041628122109158186,
+      "hits": 45,
+      "total": 1081,
+      "outs": [],
+      "candidates": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": true,
+      "setupProbability": 0.2127659574468085,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 415,
+          "total": 1081,
+          "probability": 0.38390379278445885
+        }
+      ]
+    },
+    "flush-2-low-flop-2:flop-turn": {
+      "made": false,
+      "probability": 0.19148936170212766,
+      "hits": 9,
+      "total": 47,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "5h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 378,
+          "total": 1081,
+          "probability": 0.34967622571692875
+        }
+      ]
+    },
+    "flush-2-low-flop-2:flop-river": {
+      "made": false,
+      "probability": 0.34967622571692875,
+      "hits": 378,
+      "total": 1081,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "5h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 378,
+          "total": 1081,
+          "probability": 0.34967622571692875
+        }
+      ]
+    },
+    "flush-2-low-flop-3:flop-turn": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Kh",
+        "Jh",
+        "8h",
+        "7h",
+        "6h"
+      ],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 22,
+          "total": 1081,
+          "probability": 0.020351526364477335
+        }
+      ]
+    },
+    "flush-2-low-flop-3:flop-river": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Kh",
+        "Jh",
+        "8h",
+        "7h",
+        "6h"
+      ],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 22,
+          "total": 1081,
+          "probability": 0.020351526364477335
+        }
+      ]
+    },
+    "flush-2-low-turn-1:turn-river": {
+      "made": false,
+      "probability": 0,
+      "hits": 0,
+      "total": 46,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 405,
+          "total": 1035,
+          "probability": 0.391304347826087
+        }
+      ]
+    },
+    "flush-2-low-turn-2:turn-river": {
+      "made": false,
+      "probability": 0.1956521739130435,
+      "hits": 9,
+      "total": 46,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h",
+        "6h",
+        "5h",
+        "4h",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "5h": [
+          "board-pair"
+        ],
+        "2h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 369,
+          "total": 1035,
+          "probability": 0.3565217391304348
+        }
+      ]
+    },
+    "flush-2-low-turn-3:turn-river": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Kh",
+        "Jh",
+        "8h",
+        "7h",
+        "6h"
+      ],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 22,
+          "total": 1035,
+          "probability": 0.021256038647342997
+        }
+      ]
+    },
+    "flush-2-low-turn-4:turn-river": {
+      "made": true,
+      "probability": null,
+      "hits": 0,
+      "total": 0,
+      "outs": [],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [
+        "Kh",
+        "Jh",
+        "8h",
+        "7h",
+        "6h"
+      ],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 更大同花",
+          "hits": 174,
+          "total": 1035,
+          "probability": 0.1681159420289855
+        }
+      ]
+    },
+    "open-ended-flop:flop-turn": {
+      "made": false,
+      "probability": 0.1702127659574468,
+      "hits": 8,
+      "total": 47,
+      "outs": [
+        "As",
+        "Ah",
+        "Ad",
+        "Ac",
+        "9s",
+        "9h",
+        "9d",
+        "9c"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Ah": [
+          "flush-board"
+        ],
+        "9h": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1081,
+          "probability": 0.05087881591119334
+        }
+      ]
+    },
+    "open-ended-flop:flop-river": {
+      "made": false,
+      "probability": 0.3145235892691952,
+      "hits": 340,
+      "total": 1081,
+      "outs": [
+        "As",
+        "Ah",
+        "Ad",
+        "Ac",
+        "9s",
+        "9h",
+        "9d",
+        "9c"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Ah": [
+          "flush-board"
+        ],
+        "9h": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1081,
+          "probability": 0.05087881591119334
+        }
+      ]
+    },
+    "open-ended-turn:turn-river": {
+      "made": false,
+      "probability": 0.17391304347826086,
+      "hits": 8,
+      "total": 46,
+      "outs": [
+        "As",
+        "Ah",
+        "Ad",
+        "Ac",
+        "9s",
+        "9h",
+        "9d",
+        "9c"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "As": [
+          "flush-board"
+        ],
+        "Ah": [
+          "flush-board"
+        ],
+        "Ad": [
+          "flush-board"
+        ],
+        "Ac": [
+          "flush-board"
+        ],
+        "9s": [
+          "flush-board"
+        ],
+        "9h": [
+          "flush-board"
+        ],
+        "9d": [
+          "flush-board"
+        ],
+        "9c": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 405,
+          "total": 1035,
+          "probability": 0.391304347826087
+        }
+      ]
+    },
+    "gutshot-flop:flop-turn": {
+      "made": false,
+      "probability": 0.0851063829787234,
+      "hits": 4,
+      "total": 47,
+      "outs": [
+        "Ts",
+        "Th",
+        "Td",
+        "Tc"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Th": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1081,
+          "probability": 0.05087881591119334
+        }
+      ]
+    },
+    "gutshot-flop:flop-river": {
+      "made": false,
+      "probability": 0.16466234967622573,
+      "hits": 178,
+      "total": 1081,
+      "outs": [
+        "Ts",
+        "Th",
+        "Td",
+        "Tc"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Th": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1081,
+          "probability": 0.05087881591119334
+        }
+      ]
+    },
+    "gutshot-turn:turn-river": {
+      "made": false,
+      "probability": 0.08695652173913043,
+      "hits": 4,
+      "total": 46,
+      "outs": [
+        "Ts",
+        "Th",
+        "Td",
+        "Tc"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Ts": [
+          "flush-board"
+        ],
+        "Th": [
+          "flush-board"
+        ],
+        "Td": [
+          "flush-board"
+        ],
+        "Tc": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 405,
+          "total": 1035,
+          "probability": 0.391304347826087
+        }
+      ]
+    },
+    "double-gutshot-flop:flop-turn": {
+      "made": false,
+      "probability": 0.1702127659574468,
+      "hits": 8,
+      "total": 47,
+      "outs": [
+        "Qs",
+        "Qh",
+        "Qd",
+        "Qc",
+        "8s",
+        "8h",
+        "8d",
+        "8c"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Qh": [
+          "flush-board"
+        ],
+        "8h": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1081,
+          "probability": 0.05087881591119334
+        }
+      ]
+    },
+    "double-gutshot-flop:flop-river": {
+      "made": false,
+      "probability": 0.3145235892691952,
+      "hits": 340,
+      "total": 1081,
+      "outs": [
+        "Qs",
+        "Qh",
+        "Qd",
+        "Qc",
+        "8s",
+        "8h",
+        "8d",
+        "8c"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Qh": [
+          "flush-board"
+        ],
+        "8h": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1081,
+          "probability": 0.05087881591119334
+        }
+      ]
+    },
+    "double-gutshot-turn:turn-river": {
+      "made": false,
+      "probability": 0.17391304347826086,
+      "hits": 8,
+      "total": 46,
+      "outs": [
+        "Qs",
+        "Qh",
+        "Qd",
+        "Qc",
+        "8s",
+        "8h",
+        "8d",
+        "8c"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {
+        "Qh": [
+          "flush-board"
+        ],
+        "Qc": [
+          "flush-board"
+        ],
+        "8h": [
+          "flush-board"
+        ],
+        "8c": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 72,
+          "total": 1225,
+          "probability": 0.05877551020408163
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1035,
+          "probability": 0.05314009661835749
+        }
+      ]
+    },
+    "combo-flop:flop-turn": {
+      "made": false,
+      "probability": 0.3191489361702128,
+      "hits": 15,
+      "total": 47,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9s",
+        "9h",
+        "9d",
+        "9c",
+        "5h",
+        "4s",
+        "4h",
+        "4d",
+        "4c",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [
+        "9h",
+        "4h"
+      ],
+      "risks": {
+        "9h": [
+          "flush-board"
+        ],
+        "5h": [
+          "board-pair"
+        ],
+        "4h": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 378,
+          "total": 1081,
+          "probability": 0.34967622571692875
+        }
+      ]
+    },
+    "combo-flop:flop-river": {
+      "made": false,
+      "probability": 0.5411655874190564,
+      "hits": 585,
+      "total": 1081,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9s",
+        "9h",
+        "9d",
+        "9c",
+        "5h",
+        "4s",
+        "4h",
+        "4d",
+        "4c",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [
+        "9h",
+        "4h"
+      ],
+      "risks": {
+        "9h": [
+          "flush-board"
+        ],
+        "5h": [
+          "board-pair"
+        ],
+        "4h": [
+          "flush-board"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 378,
+          "total": 1081,
+          "probability": 0.34967622571692875
+        }
+      ]
+    },
+    "combo-turn:turn-river": {
+      "made": false,
+      "probability": 0.32608695652173914,
+      "hits": 15,
+      "total": 46,
+      "outs": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9s",
+        "9h",
+        "9d",
+        "9c",
+        "5h",
+        "4s",
+        "4h",
+        "4d",
+        "4c",
+        "3h",
+        "2h"
+      ],
+      "candidates": [],
+      "overlaps": [
+        "9h",
+        "4h"
+      ],
+      "risks": {
+        "9h": [
+          "flush-board"
+        ],
+        "5h": [
+          "board-pair"
+        ],
+        "4h": [
+          "flush-board"
+        ],
+        "2h": [
+          "board-pair"
+        ]
+      },
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [
+        "Ah",
+        "Qh",
+        "Jh",
+        "Th",
+        "9h"
+      ],
+      "opponent": [
+        {
+          "label": "翻前 · 双张红桃",
+          "hits": 55,
+          "total": 1225,
+          "probability": 0.044897959183673466
+        },
+        {
+          "label": "当前 · 持有红桃",
+          "hits": 369,
+          "total": 1035,
+          "probability": 0.3565217391304348
+        }
+      ]
+    },
+    "set-flop:flop-turn": {
+      "made": false,
+      "probability": 0.14893617021276595,
+      "hits": 7,
+      "total": 47,
+      "outs": [
+        "Ks",
+        "Kd",
+        "Kc",
+        "7c",
+        "2s",
+        "2h",
+        "2d"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 73,
+          "total": 1225,
+          "probability": 0.05959183673469388
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1081,
+          "probability": 0.05087881591119334
+        }
+      ]
+    },
+    "set-flop:flop-river": {
+      "made": false,
+      "probability": 0.333950046253469,
+      "hits": 361,
+      "total": 1081,
+      "outs": [
+        "Ks",
+        "Kd",
+        "Kc",
+        "7c",
+        "2s",
+        "2h",
+        "2d"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 73,
+          "total": 1225,
+          "probability": 0.05959183673469388
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1081,
+          "probability": 0.05087881591119334
+        }
+      ]
+    },
+    "set-turn:turn-river": {
+      "made": false,
+      "probability": 0.21739130434782608,
+      "hits": 10,
+      "total": 46,
+      "outs": [
+        "Ks",
+        "Kd",
+        "Kc",
+        "Qs",
+        "Qh",
+        "Qc",
+        "7c",
+        "2s",
+        "2h",
+        "2d"
+      ],
+      "candidates": [],
+      "overlaps": [],
+      "risks": {},
+      "backdoor": false,
+      "setupProbability": null,
+      "bestFlush": [],
+      "higherFlushCards": [],
+      "opponent": [
+        {
+          "label": "翻前 · 任意对子",
+          "hits": 73,
+          "total": 1225,
+          "probability": 0.05959183673469388
+        },
+        {
+          "label": "当前 · 听花或成花",
+          "hits": 55,
+          "total": 1035,
+          "probability": 0.05314009661835749
+        }
+      ]
+    }
+  }
+}

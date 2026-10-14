@@ -498,3 +498,69 @@ html { scroll-padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
   .draw-example { gap: 12px; }
   .draw-example-board { gap: 3px; }
 }
+
+.draw-stage { position: sticky; top: 0; z-index: 6; background: #141a12f5; backdrop-filter: blur(12px); }
+.draw-item { scroll-margin-top: 82px; }
+.draw-toggle { min-height: 82px; }
+.draw-count-label { font-size: 10px; line-height: 1.6; }
+.draw-probability.draw-made { font: 16px 'DM Sans Variable', 'Microsoft YaHei', sans-serif; letter-spacing: 0; }
+.draw-controls { padding-bottom: 17px; margin-bottom: 17px; border-bottom: 1px solid #3d4531; }
+.draw-choice-row { display: flex; gap: 6px; }
+.draw-choice-row button { flex: 1; min-height: 49px; padding: 7px; display: flex; flex-direction: column; gap: 4px; align-items: center; border: 1px solid #3c4532; border-radius: 7px; color: #a4b096; font-size: 12px; }
+.draw-choice-row button small { font-size: 10px; color: #7f9270; }
+.draw-choice-row button[aria-pressed=true], .draw-quality-choice button[aria-pressed=true], .draw-board-choice button[aria-pressed=true] { background: #7d694229; border-color: #ad9160; color: #e7cca1; }
+.draw-choice-row button[aria-pressed=true] small { color: #c4b28c; }
+.draw-board-choice { display: flex; gap: 10px; justify-content: space-between; align-items: center; margin-top: 9px; }
+.draw-board-choice > span { font-size: 11px; color: #9bab8d; white-space: nowrap; }
+.draw-board-choice > div { display: flex; gap: 5px; }
+.draw-board-choice button { min-height: 42px; min-width: 41px; padding: 6px; border: 1px solid #3d4632; border-radius: 6px; font-size: 11px; color: #9bab8d; }
+.draw-quality-choice { display: flex; gap: 6px; margin-top: 9px; }
+.draw-quality-choice button { display: flex; align-items: baseline; justify-content: center; gap: 7px; flex: 1; border: 1px solid #3d4632; border-radius: 6px; min-height: 42px; color: #a3b096; font-size: 12px; }
+.draw-quality-choice button { align-items: center; }
+.draw-fixed-count { display: grid; place-items: center; min-height: 42px; min-width: 41px; color: #c5b58d; font-size: 12px; }
+.draw-quality-choice small { font-size: 10px; }
+.draw-setup { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border-radius: 7px; background: #10180f; margin-bottom: 14px; }
+.draw-setup > span { font-size: 12px; color: #bdc9ae; }
+.draw-setup small { display: block; margin-top: 4px; font-size: 10px; color: #849675; }
+.draw-setup strong { color: #dcc296; font: 24px Georgia, serif; }
+.draw-subheading, .draw-best h3 { display: flex; align-items: baseline; gap: 7px; font-size: 12px; font-weight: 500; color: #c8d0b9; margin: 16px 0 10px; }
+.draw-subheading > span, .draw-best h3 > span { font-size: 10px; color: #8a9a7a; font-weight: 400; }
+.draw-subheading b { margin-left: auto; color: var(--gold); font-weight: 500; }
+.draw-best > div { display: flex; gap: 6px; }
+.draw-out-cards { gap: 8px 7px; padding: 12px 10px; }
+.draw-out-cards > button { display: inline-flex; position: relative; padding: 0; border-radius: 3px; }
+.draw-out-cards > button { min-width: 36px; min-height: 44px; align-items: center; justify-content: center; }
+.draw-out-cards > button.risky { outline: 1px dashed #b5795c; outline-offset: 2px; }
+.draw-out-cards > button.overlap { outline: 2px solid #d6b676; outline-offset: 2px; }
+.draw-out-cards > button[aria-pressed=true] { outline: 2px solid #edbd97; outline-offset: 2px; }
+.draw-out-cards > button > i { position: absolute; right: -4px; bottom: -7px; font-size: 26px; font-style: normal; color: #d79771; line-height: 1; text-shadow: 0 1px 2px #000; }
+.draw-risk-note { display: flex; align-items: center; gap: 5px; font-size: 10px; color: #c0a18c; margin-top: 10px; }
+.draw-risk-note > span:not(.risk-dot) { color: #998f78; }
+.draw-risk-note small { margin-left: auto; font-size: 10px; color: #89987b; }
+.risk-dot { height: 5px; width: 5px; border-radius: 50%; background: #d79771; margin-right: 2px; }
+.draw-risk-explanation { margin-top: 10px; padding: 8px 11px; border-left: 2px solid #b5795c; background: #4a30201c; }
+.draw-risk-explanation p { font-size: 12px; line-height: 1.8; color: #c8b7a1; margin: 3px 0; }
+.draw-strength { margin-top: 15px; }
+.draw-strength > p { font-size: 12px; color: #aebd9f; line-height: 1.9; margin: 0; }
+.draw-higher-cards { display: flex; gap: 6px; margin-top: 10px; }
+.draw-opponent, .draw-actions { margin-top: 20px; padding-top: 16px; border-top: 1px solid #3e4932; }
+.draw-opponent h3, .draw-actions h3 { margin: 0 0 13px; color: #dcc59a; font-size: 13px; font-weight: 500; }
+.draw-opponent h3 > span, .draw-actions h3 > span, .draw-opponent h4 > span { color: #8c9e7c; font-size: 10px; font-weight: 400; margin-left: 6px; }
+.draw-random-label { color: #a9b99a; font-size: 11px; }
+.draw-random-label > span { font-size: 10px; color: #7c906c; margin-left: 6px; }
+.draw-opponent dl { margin: 10px 0 14px; background: #11190f; border-radius: 7px; padding: 1px 12px; }
+.draw-opponent dl > div { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 42px; }
+.draw-opponent dl > div + div { border-top: 1px solid #2a3822; }
+.draw-opponent dt { font-size: 12px; color: #aebd9f; }
+.draw-opponent dd { margin: 0; color: #d7c399; font-size: 15px; font-variant-numeric: tabular-nums; }
+.draw-opponent h4 { margin: 0 0 8px; color: #bccaae; font-size: 12px; font-weight: 400; }
+.draw-opponent > p { font-size: 12px; color: #aab99b; line-height: 1.9; margin: 0; }
+.draw-actions > p { display: flex; gap: 10px; font-size: 12px; color: #aab99b; line-height: 1.9; margin: 10px 0 0; }
+.draw-actions > p > b { flex-shrink: 0; font: 13px Georgia, serif; color: #b39b70; padding-top: 5px; }
+@media (max-width: 374px) {
+  .draw-board-choice { gap: 5px; }
+  .draw-board-choice > div { gap: 4px; }
+  .draw-board-choice button { min-width: 36px; }
+  .draw-quality-choice button { gap: 5px; }
+  .draw-name > small { font-size: 10px; }
+}

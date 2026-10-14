@@ -5,6 +5,7 @@ import { actionOrder, POSITION_TERMS, relativePosition, SEATS, type PositionId, 
 import { cellColors, EQUITY_BANDS, equityBand, exampleCards, HANDS, handStats, matrixHand, RANKS, safePlayers, TERMS, type Page } from './lib/poker';
 import { PlayingCard } from './components/PlayingCard';
 import { Draws } from './components/Draws';
+import { DRAW_SOURCES } from './data/draws';
 
 const EQUITIES: Record<string, number[]> = equityData.hands;
 const STORAGE_KEY = 'pocket.preferences.v1';
@@ -200,7 +201,7 @@ function Positions({ players, setPlayers }: { players: number; setPlayers: (play
 }
 
 function InfoContent({ page }: { page: Page }) {
-  if (page === 'draws') return <div className="info-content"><section><h3>补牌 <span>Outs</span></h3><p>表中命中率指所选阶段至少出现一张列出的补牌。翻牌后有 47 张未知牌，转牌后有 46 张；重叠补牌只计一次。</p><a href="https://www.pokerstars.com/poker/learn/lesson/calculating-outs/" target="_blank" rel="noreferrer">听牌与补牌 · PokerStars ↗</a></section></div>;
+  if (page === 'draws') return <div className="info-content"><section><h3>计算口径 <span>Drawing model</span></h3><p>成牌概率枚举所有剩余牌组合，计算所选阶段完成目标牌型的比例。后门同花需要连续两张；重叠补牌只计一次。</p><p>对手数字是随机底牌基准：翻前只排除你的两张底牌，当前再排除公共牌；范围与行动线索依据牌例作定性分析。</p></section><section><h3>参考 <span>References</span></h3>{DRAW_SOURCES.map(source => <p key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title} · PokerStars ↗</a></p>)}</section></div>;
   return <div className="info-content">
     {page === 'hands' ? <>
       <section><h3>胜率口径 <span>Equity model</span></h3><p>对手随机持牌，所有人看到河牌。数值为赢得底池的平均份额：独赢记 1，平局按平分人数计入。</p><p>平均胜率为 1 ÷ 总人数。颜色按与平均值的比例分档：远高 ≥ 1.5 倍，略高 1.1–1.5 倍，接近 0.9–1.1 倍，低于 &lt; 0.9 倍。</p></section>
